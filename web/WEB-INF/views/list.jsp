@@ -56,26 +56,26 @@
         <table class="w-full text-xs">
           <thead>
             <tr class="border-b border-slate-100 bg-slate-50/80 text-left">
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">序号</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">订单编号</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">商品编号</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">商品名称</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">商品网址</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">商品小图</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-center">赠品</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">标准单价</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">成交单价</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">优惠金额</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-center">真空</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-center">保温</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">数量</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">小计</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">积分</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">购买日期</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">特殊要求</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">供货商</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">备注</th>
-              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-center">操作</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">序号</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">订单编号</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">商品编号</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">商品名称</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">商品网址</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">商品小图</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-center">赠品</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-right">标准单价</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-right">成交单价</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-right">优惠金额</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-center">真空</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-center">保温</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-right">数量</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-right">小计</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-right">积分</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">购买日期</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">特殊要求</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">供货商</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs">备注</th>
+              <th class="whitespace-nowrap px-2 py-2.5 font-semibold text-slate-600 text-xs text-center">操作</th>
             </tr>
           </thead>
           <tbody>
