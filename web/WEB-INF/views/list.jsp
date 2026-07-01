@@ -56,81 +56,81 @@
         <table class="w-full text-xs">
           <thead>
             <tr class="border-b border-slate-100 bg-slate-50/80 text-left">
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">序号</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">订单编号</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">商品编号</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">商品名称</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">商品网址</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">商品小图</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-center">赠品</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-right">标准单价</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-right">成交单价</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-right">优惠金额</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-center">真空</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-center">保温</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-right">数量</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-right">小计</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-right">积分</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">购买日期</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">特殊要求</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">供货商</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600">备注</th>
-              <th class="whitespace-nowrap px-3 py-2.5 font-semibold text-slate-600 text-center">操作</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">序号</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">订单编号</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">商品编号</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">商品名称</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">商品网址</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">商品小图</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-center">赠品</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">标准单价</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">成交单价</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">优惠金额</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-center">真空</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-center">保温</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">数量</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">小计</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-right">积分</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">购买日期</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">特殊要求</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">供货商</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px]">备注</th>
+              <th class="whitespace-nowrap px-2 py-2 font-semibold text-slate-600 text-[10px] text-center">操作</th>
             </tr>
           </thead>
           <tbody>
             <c:forEach items="${detailList}" var="d" varStatus="s">
               <tr class="border-b border-slate-50 hover:bg-slate-50/60 transition-colors ${s.index % 2 == 1 ? 'bg-slate-50/30' : ''}">
-                <td class="px-3 py-2 text-slate-600 font-mono text-[11px]">${d.recordId}</td>
-                <td class="px-3 py-2 font-mono text-[11px] text-indigo-600">${d.orderId}</td>
-                <td class="px-3 py-2 font-mono text-[11px]">${d.productId}</td>
-                <td class="px-3 py-2 font-medium text-slate-800 max-w-[140px] truncate" title="${d.productName}">
+                <td class="px-2 py-2.5 text-slate-600 font-mono text-xs">${d.recordId}</td>
+                <td class="px-2 py-2.5 font-mono text-xs text-indigo-600">${d.orderId}</td>
+                <td class="px-2 py-2.5 font-mono text-xs">${d.productId}</td>
+                <td class="px-2 py-2.5 font-medium text-slate-800 max-w-[130px] truncate text-xs" title="${d.productName}">
                   <c:if test="${d.isGift}"><span class="mr-1 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700">赠</span></c:if>
                   ${d.productName}
                 </td>
-                <td class="px-3 py-2 max-w-[120px] truncate">
-                  <a href="${d.webLink}" target="_blank" class="text-blue-500 hover:text-blue-700 underline" title="${d.webLink}">🔗 链接</a>
+                <td class="px-2 py-2.5 max-w-[100px] truncate">
+                  <a href="${d.webLink}" target="_blank" class="text-blue-500 hover:text-blue-700 underline text-xs" title="${d.webLink}">链接</a>
                 </td>
-                <td class="px-3 py-1.5">
+                <td class="px-2 py-2">
                   <c:choose>
                     <c:when test="${not empty d.picUrl}">
                       <img src="${d.picUrl}" alt="商品图" class="product-thumb h-8 w-8 rounded-md object-cover border border-slate-200 cursor-pointer"
                            onerror="this.onerror=null;this.outerHTML='<span class=text-slate-300><i class=bi bi-image></i></span>';">
                     </c:when>
-                    <c:otherwise><span class="text-slate-300"><i class="bi bi-image"></i></span></c:otherwise>
+                    <c:otherwise><span class="text-slate-300 text-xs"><i class="bi bi-image"></i></span></c:otherwise>
                   </c:choose>
                 </td>
-                <td class="px-3 py-2 text-center">
+                <td class="px-2 py-2.5 text-center">
                   <c:choose>
                     <c:when test="${d.isGift}"><span class="inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-700">是</span></c:when>
-                    <c:otherwise><span class="text-slate-300">-</span></c:otherwise>
+                    <c:otherwise><span class="text-slate-300 text-xs">-</span></c:otherwise>
                   </c:choose>
                 </td>
-                <td class="px-3 py-2 text-right font-mono text-[11px] text-slate-600">&yen;<fmt:formatNumber value="${d.originalPrice}" pattern="#,##0.0"/></td>
-                <td class="px-3 py-2 text-right font-mono text-[11px] ${d.isGift ? 'text-amber-600' : 'text-slate-700'} font-semibold">&yen;<fmt:formatNumber value="${d.realPrice}" pattern="#,##0.0"/></td>
-                <td class="px-3 py-2 text-right font-mono text-[11px] ${d.reducedMoney > 0 ? 'text-emerald-600' : (d.reducedMoney < 0 ? 'text-red-500' : 'text-slate-400')}">
+                <td class="px-2 py-2.5 text-right font-mono text-xs text-slate-600">&yen;<fmt:formatNumber value="${d.originalPrice}" pattern="#,##0.0"/></td>
+                <td class="px-2 py-2.5 text-right font-mono text-xs ${d.isGift ? 'text-amber-600' : 'text-slate-700'} font-semibold">&yen;<fmt:formatNumber value="${d.realPrice}" pattern="#,##0.0"/></td>
+                <td class="px-2 py-2.5 text-right font-mono text-xs ${d.reducedMoney > 0 ? 'text-emerald-600' : (d.reducedMoney < 0 ? 'text-red-500' : 'text-slate-400')}">
                   <fmt:formatNumber value="${d.reducedMoney}" pattern="#,##0.0"/>
                 </td>
-                <td class="px-3 py-2 text-center">
+                <td class="px-2 py-2.5 text-center">
                   <c:choose>
                     <c:when test="${d.isVaccum}"><span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-0.5 text-[10px] font-semibold text-blue-700">是</span></c:when>
-                    <c:otherwise><span class="text-slate-300">-</span></c:otherwise>
+                    <c:otherwise><span class="text-slate-300 text-xs">-</span></c:otherwise>
                   </c:choose>
                 </td>
-                <td class="px-3 py-2 text-center">
+                <td class="px-2 py-2.5 text-center">
                   <c:choose>
                     <c:when test="${d.isKeepWarm}"><span class="inline-flex items-center rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-semibold text-orange-700">是</span></c:when>
-                    <c:otherwise><span class="text-slate-300">-</span></c:otherwise>
+                    <c:otherwise><span class="text-slate-300 text-xs">-</span></c:otherwise>
                   </c:choose>
                 </td>
-                <td class="px-3 py-2 text-right font-semibold text-slate-700">${d.quantity}</td>
-                <td class="px-3 py-2 text-right font-mono text-[11px] text-slate-700 font-semibold">&yen;<fmt:formatNumber value="${d.subtotal}" pattern="#,##0.00"/></td>
-                <td class="px-3 py-2 text-right text-slate-600">${d.increasedScore}</td>
-                <td class="px-3 py-2 whitespace-nowrap text-slate-600"><fmt:formatDate value="${d.purchasingDate}" pattern="yyyy-MM-dd"/></td>
-                <td class="px-3 py-2 max-w-[100px] truncate text-slate-600" title="${d.specialRequirement}">${d.specialRequirement}</td>
-                <td class="px-3 py-2 max-w-[100px] truncate text-slate-600" title="${d.provider}">${d.provider}</td>
-                <td class="px-3 py-2 max-w-[100px] truncate text-slate-400" title="${d.remark}">${d.remark}</td>
-                <td class="px-3 py-2">
+                <td class="px-2 py-2.5 text-right font-semibold text-slate-700 text-xs">${d.quantity}</td>
+                <td class="px-2 py-2.5 text-right font-mono text-xs text-slate-700 font-semibold">&yen;<fmt:formatNumber value="${d.subtotal}" pattern="#,##0.00"/></td>
+                <td class="px-2 py-2.5 text-right text-slate-600 text-xs">${d.increasedScore}</td>
+                <td class="px-2 py-2.5 whitespace-nowrap text-slate-600 text-xs"><fmt:formatDate value="${d.purchasingDate}" pattern="yyyy-MM-dd"/></td>
+                <td class="px-2 py-2.5 max-w-[90px] truncate text-slate-600 text-xs" title="${d.specialRequirement}">${d.specialRequirement}</td>
+                <td class="px-2 py-2.5 max-w-[90px] truncate text-slate-600 text-xs" title="${d.provider}">${d.provider}</td>
+                <td class="px-2 py-2.5 max-w-[80px] truncate text-slate-400 text-xs" title="${d.remark}">${d.remark}</td>
+                <td class="px-2 py-2.5">
                   <div class="flex items-center justify-center gap-1">
                     <a href="${pageContext.request.contextPath}/detail/view?recordId=${d.recordId}"
                        class="inline-flex h-7 w-7 items-center justify-center rounded-md text-slate-400 hover:bg-indigo-50 hover:text-indigo-600 transition" title="查看">

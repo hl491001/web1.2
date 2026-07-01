@@ -28,33 +28,33 @@
 </head>
 <body class="h-full bg-slate-50 antialiased">
 
-<aside class="fixed inset-y-0 left-0 z-50 flex w-60 flex-col bg-slate-900 text-slate-300">
-  <div class="flex h-16 items-center gap-3 border-b border-slate-700/60 px-5">
-    <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-500 text-white">
-      <i class="bi bi-box-seam text-lg"></i>
+  <aside class="fixed inset-y-0 left-0 z-50 flex w-44 flex-col bg-slate-900 text-slate-300">
+  <div class="flex h-14 items-center gap-2 border-b border-slate-700/60 px-3">
+    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-500 text-white">
+      <i class="bi bi-box-seam text-sm"></i>
     </div>
-    <div>
-      <h1 class="text-sm font-semibold text-white leading-tight">订单明细管理</h1>
-      <p class="text-[10px] text-slate-400">Order Detail System</p>
+    <div class="min-w-0">
+      <h1 class="text-xs font-semibold text-white leading-tight truncate">订单明细管理</h1>
+      <p class="text-[9px] text-slate-400 truncate">Order Detail System</p>
     </div>
   </div>
-  <nav class="flex-1 overflow-y-auto px-3 py-4 space-y-1">
-    <p class="mb-2 px-2 text-[10px] font-semibold uppercase tracking-widest text-slate-500">主菜单</p>
+  <nav class="flex-1 overflow-y-auto px-2 py-3 space-y-0.5">
+    <p class="mb-1.5 px-2 text-[9px] font-semibold uppercase tracking-widest text-slate-500">主菜单</p>
     <a href="${pageContext.request.contextPath}/detail/list"
-       class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-slate-800 hover:text-white">
-      <i class="bi bi-table text-base"></i>
+       class="flex items-center gap-2 rounded-lg px-2 py-2 text-xs font-medium transition-colors hover:bg-slate-800 hover:text-white">
+      <i class="bi bi-table text-sm"></i>
       <span>明细列表</span>
     </a>
     <a href="${pageContext.request.contextPath}/detail/add"
-       class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-slate-800 hover:text-white">
-      <i class="bi bi-plus-circle text-base"></i>
+       class="flex items-center gap-2 rounded-lg px-2 py-2 text-xs font-medium transition-colors hover:bg-slate-800 hover:text-white">
+      <i class="bi bi-plus-circle text-sm"></i>
       <span>新增明细</span>
     </a>
   </nav>
 
 </aside>
 
-<main class="ml-60 min-h-screen">
+<main class="ml-44 min-h-screen">
   <header class="sticky top-0 z-40 flex h-16 items-center justify-between border-b border-slate-200 bg-white/80 backdrop-blur px-6">
     <h2 class="text-lg font-semibold text-slate-800">客户订单明细管理系统</h2>
   </header>
