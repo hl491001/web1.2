@@ -15,12 +15,8 @@
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
         <div>
           <label class="mb-1.5 block text-xs font-medium text-slate-600">订单编号 <span class="text-red-400">*</span></label>
-          <select name="orderId" required class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition bg-white">
-            <option value="">-- 请选择订单 --</option>
-            <c:forEach items="${orders}" var="o">
-              <option value="${o.orderId}">${o.orderId} - ${o.customerName}</option>
-            </c:forEach>
-          </select>
+          <input type="text" name="orderId" id="orderId" required maxlength="20" value="${nextOrderId}" placeholder="ORD000001"
+                 class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm font-mono focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition">
         </div>
         <div>
           <label class="mb-1.5 block text-xs font-medium text-slate-600">商品编号 <span class="text-red-400">*</span></label>
@@ -133,7 +129,7 @@
         </div>
         <div>
           <label class="mb-1.5 block text-xs font-medium text-slate-600">购买日期</label>
-          <input type="date" name="purchasingDate" id="purchasingDate"
+          <input type="date" name="purchasingDate" id="purchasingDate" value="${purchasingDate}"
                  class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition">
         </div>
         <div>
@@ -170,8 +166,8 @@
 
 <script>
 (function() {
-  var d = document.getElementById('purchasingDate');
-  if (d && !d.value) d.value = new Date().toISOString().split('T')[0];
+  var oid = document.getElementById('orderId');
+  if (oid) oid.addEventListener('focus', function() { this.select(); });
 })();
 
 var origEl = document.getElementById('originalPrice');

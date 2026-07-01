@@ -52,6 +52,24 @@ public class OrderDetailDao {
         return null;
     }
 
+    public String getMaxOrderId() {
+        String sql = "SELECT MAX(OrderID) FROM order_details";
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtil.getConnection();
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            if (rs.next()) return rs.getString(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(conn, ps, rs);
+        }
+        return null;
+    }
+
     public int insert(OrderDetailVO d) {
         String sql = "INSERT INTO order_details (" +
             "OrderID, ProductID, ProductName, WebLink, Pic_Url, IsGift, " +

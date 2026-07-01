@@ -1,9 +1,7 @@
 package com.order.servlet;
 
-import com.order.dao.OrderDao;
 import com.order.dao.OrderDetailDao;
 import com.order.dto.OrderDetailVO;
-import com.order.entity.Order;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +20,6 @@ import java.util.List;
 public class OrderDetailServlet extends HttpServlet {
 
     private final OrderDetailDao detailDao = new OrderDetailDao();
-    private final OrderDao orderDao = new OrderDao();
     private static final SimpleDateFormat DATE_FMT = new SimpleDateFormat("yyyy-MM-dd");
 
     @Override
@@ -89,9 +86,23 @@ public class OrderDetailServlet extends HttpServlet {
 
     private void handleAddForm(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        List<Order> orders = orderDao.findAll();
-        req.setAttribute("orders", orders);
+        String maxOrderId = detailDao.getMaxOrderId();
+        String nextOrderId = generateNextOrderId(maxOrderId);
+        req.setAttribute("nextOrderId", nextOrderId);
+        req.setAttribute("purchasingDate", DATE_FMT.format(new Date()));
         req.getRequestDispatcher("/WEB-INF/views/add.jsp").forward(req, resp);
+    }
+
+    private String generateNextOrderId(String maxOrderId) {
+        if (maxOrderId == null || maxOrderId.isEmpty()) return "ORD000001";
+        String prefix = maxOrderId.replaceAll("\\d+$", "");
+        String numStr = maxOrderId.substring(prefix.length());
+        try {
+            int num = Integer.parseInt(numStr) + 1;
+            return prefix + String.format("%0" + numStr.length() + "d", num);
+        } catch (NumberFormatException e) {
+            return maxOrderId + "_1";
+        }
     }
 
     private void handleAddSave(HttpServletRequest req, HttpServletResponse resp)
@@ -127,9 +138,7 @@ public class OrderDetailServlet extends HttpServlet {
             resp.sendRedirect(req.getContextPath() + "/detail/list");
             return;
         }
-        List<Order> orders = orderDao.findAll();
         req.setAttribute("detail", detail);
-        req.setAttribute("orders", orders);
         req.getRequestDispatcher("/WEB-INF/views/edit.jsp").forward(req, resp);
     }
 
