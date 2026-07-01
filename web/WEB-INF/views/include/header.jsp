@@ -51,9 +51,7 @@
       <span>新增明细</span>
     </a>
   </nav>
-  <div class="border-t border-slate-700/60 px-5 py-3">
-    <p class="text-[10px] text-slate-500">© 2026 OrderMS v1.0</p>
-  </div>
+
 </aside>
 
 <main class="ml-60 min-h-screen">
