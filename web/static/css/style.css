@@ -1,0 +1,51 @@
+.product-thumb {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-thumb:hover {
+  transform: scale(2.5);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 50;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+input[type="checkbox"].sr-only + div {
+  position: relative;
+  display: inline-block;
+}
+input[type="checkbox"].sr-only + div::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s ease;
+}
+input[type="checkbox"].sr-only:checked + div::after {
+  transform: translateX(16px);
+}
+
+#flashMsg {
+  animation: fadeInDown 0.3s ease;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #c7d2fe;
+  color: #3730a3;
+}
