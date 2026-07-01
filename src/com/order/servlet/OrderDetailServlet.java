@@ -59,20 +59,23 @@ public class OrderDetailServlet extends HttpServlet {
         String keyword = req.getParameter("keyword");
         String orderId = req.getParameter("orderId");
         String productName = req.getParameter("productName");
+        String sortParam = req.getParameter("sort");
+        boolean asc = !"desc".equalsIgnoreCase(sortParam);
 
         List<OrderDetailVO> list;
         if ((keyword != null && !keyword.isEmpty()) ||
             (orderId != null && !orderId.isEmpty()) ||
             (productName != null && !productName.isEmpty())) {
-            list = detailDao.search(keyword, orderId, productName);
+            list = detailDao.search(keyword, orderId, productName, asc);
         } else {
-            list = detailDao.findAll();
+            list = detailDao.findAll(asc);
         }
 
         req.setAttribute("detailList", list);
         req.setAttribute("keyword", keyword);
         req.setAttribute("orderIdParam", orderId);
         req.setAttribute("productName", productName);
+        req.setAttribute("asc", asc);
 
         HttpSession session = req.getSession();
         String msg = (String) session.getAttribute("msg");

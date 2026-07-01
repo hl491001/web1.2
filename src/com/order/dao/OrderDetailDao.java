@@ -8,12 +8,12 @@ import java.util.List;
 
 public class OrderDetailDao {
 
-    public List<OrderDetailVO> findAll() {
-        String sql = "SELECT * FROM order_details ORDER BY RecordID DESC";
+    public List<OrderDetailVO> findAll(boolean asc) {
+        String sql = "SELECT * FROM order_details ORDER BY OrderID " + (asc ? "ASC" : "DESC");
         return queryList(sql, null);
     }
 
-    public List<OrderDetailVO> search(String keyword, String orderId, String productName) {
+    public List<OrderDetailVO> search(String keyword, String orderId, String productName, boolean asc) {
         StringBuilder sql = new StringBuilder("SELECT * FROM order_details WHERE 1=1");
         List<Object> params = new ArrayList<>();
         if (keyword != null && !keyword.trim().isEmpty()) {
@@ -29,7 +29,7 @@ public class OrderDetailDao {
             sql.append(" AND ProductName LIKE ?");
             params.add("%" + productName.trim() + "%");
         }
-        sql.append(" ORDER BY RecordID DESC");
+        sql.append(" ORDER BY OrderID ").append(asc ? "ASC" : "DESC");
         return queryList(sql.toString(), params.toArray());
     }
 

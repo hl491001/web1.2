@@ -34,8 +34,14 @@
 
 <div class="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex items-center justify-between border-b border-slate-100 px-5 py-3">
-    <div class="text-sm text-slate-500">
-      共 <span class="font-semibold text-slate-700">${detailList.size()}</span> 条记录
+    <div class="flex items-center gap-3">
+      <div class="text-sm text-slate-500">
+        共 <span class="font-semibold text-slate-700">${detailList.size()}</span> 条记录
+      </div>
+      <a href="${pageContext.request.contextPath}/detail/list?sort=${asc ? 'desc' : 'asc'}&keyword=${keyword}&orderId=${orderIdParam}&productName=${productName}"
+         class="inline-flex items-center gap-1 rounded-lg border border-slate-300 px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50 transition">
+        <i class="bi ${asc ? 'bi-sort-down' : 'bi-sort-down-alt'}"></i> ${asc ? '正序' : '倒序'}
+      </a>
     </div>
     <a href="${pageContext.request.contextPath}/detail/add"
        class="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-700 transition shadow-sm">
@@ -81,7 +87,7 @@
           <tbody>
             <c:forEach items="${detailList}" var="d" varStatus="s">
               <tr class="border-b border-slate-50 hover:bg-slate-50/60 transition-colors ${s.index % 2 == 1 ? 'bg-slate-50/30' : ''}">
-                <td class="px-2 py-2.5 text-slate-600 font-mono text-xs">${d.recordId}</td>
+                <td class="px-2 py-2.5 text-slate-600 font-mono text-xs">${s.count}</td>
                 <td class="px-2 py-2.5 font-mono text-xs text-indigo-600">${d.orderId}</td>
                 <td class="px-2 py-2.5 font-mono text-xs">${d.productId}</td>
                 <td class="px-2 py-2.5 font-medium text-slate-800 max-w-[130px] truncate text-xs" title="${d.productName}">
